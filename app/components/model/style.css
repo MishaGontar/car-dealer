@@ -1,0 +1,26 @@
+.list-card {
+    @apply flex flex-col bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105
+}
+
+.list-header {
+    @apply flex items-center justify-between
+}
+
+.list-header > h3 {
+    @apply text-2xl font-semibold text-gray-900
+}
+
+.list-header > span {
+    @apply text-sm font-medium text-gray-600
+}
+
+.list-footer {
+    @apply mt-4 flex items-center space-x-4 text-sm text-gray-500
+}
+
+.container-not-found{
+    @appl ytext-center py-6
+}
+.text-not-found{
+    @apply text-lg text-gray-500
+}

@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car dealer
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is a car dealer application designed to allow users to filter vehicles by type and model year. The application
+fetches data from the NHTSA API and displays vehicle models based on selected make and model year. The app consists of
+two main pages: the Filter Page where users select vehicle type and model year, and the Result Page that displays the
+list of vehicle models matching the selected criteria.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Filter Page**: page to select a vehicle make and model year. The user can choose a make from a dropdown populated
+  with vehicle make data and a model year from a range between 2015 and the current year. The "Next" button is enabled
+  only after both parameters are selected, and it navigates to the results page to display the vehicle models. .
+- **Result Page**: Result Page: Displays vehicle models based on the selected make and model year. The page fetches
+  vehicle data using the selected parameters and shows the results. It includes error handling for data fetching issues
+  and is pre-rendered using generateStaticParams for optimal performance.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **React** for building the user interface
+- **Next.js** for server-side rendering and static site generation
+- **SWR** for data fetching with caching
+- **TypeScript** for static type checking
+- **Tailwind CSS** for utility-first CSS styling
+- **Nanoid** for generating unique identifiers
 
-## Learn More
+## Installation and Setup
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Node.js** (version 14 or higher)
+- **npm**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Setup
 
-## Deploy on Vercel
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/car-dealer.git
+2. Install dependencies:
+   ```bash
+   npm install
+3. Run Project:
+   ```bash
+   npm run start
+4. Build Project:
+    ```bash
+   npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Name                         | Screen                                                                     |
+|------------------------------|----------------------------------------------------------------------------|
+| Filter page                  | ![Filter page](documentation/filter-vehicle.png)                           |
+| Filter page choose an option | ![Filter page choose an option  ](documentation/filter-vehicle-choose.png) |
+| Filter page loading          | ![Filter page loading](documentation/filter-vehicle-loading.png)           |
+| Filter page error            | ![Filter page error](documentation/filter-vehicle-error.png)               |
+| Result filter page           | ![Result filter page](documentation/result-vehicle-result.png)             |
+| Result filter page loading   | ![Result filter page loading](documentation/result-vehicle-loading.png)    |
+| Result filter page error     | ![Result filter page error](documentation/result-vehicle-error.png)        |

@@ -1,0 +1,11 @@
+.button {
+    @apply w-full py-2 px-4 rounded-md
+}
+
+.button-active {
+    @apply bg-blue-500 text-white hover:bg-blue-600
+}
+
+.button-disable {
+    @apply bg-gray-300 text-gray-500 cursor-not-allowed
+}

@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.container-loading {
+    @apply flex justify-center mt-10
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container-loading > div {
+    @apply border-gray-300 h-10 w-10 animate-spin rounded-full border-8 border-t-blue-600
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.container-home {
+    @apply min-h-screen bg-gray-100 flex items-center justify-center
+}
+
+.container-home-context {
+    @apply bg-white shadow-md rounded-lg p-6 w-full max-w-md
+}
+
+.container-home-context > h1 {
+    @apply text-2xl font-bold mb-4
 }

@@ -1,0 +1,19 @@
+.container-result {
+    @apply min-h-screen bg-gray-100 p-6
+}
+
+.context {
+    @apply max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6
+}
+
+.container-header {
+    @apply flex justify-between
+}
+
+.container-header > h1 {
+    @apply text-2xl font-bold mb-4
+}
+
+.container-header > a {
+    @apply text-blue-600
+}
