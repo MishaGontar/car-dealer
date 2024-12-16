@@ -25,14 +25,12 @@ export async function generateStaticParams() {
 }
 
 interface ResultProps {
-    params: {
-        makeId: number;
-        year: number;
-    };
+    makeId: string;
+    year: string;
 }
 
 
-export default async function Result({params}: ResultProps) {
+export default async function Result({params}: { params: Promise<ResultProps> }) {
     const {makeId, year} = await params;
 
     if (!makeId || !year) {
@@ -43,12 +41,12 @@ export default async function Result({params}: ResultProps) {
         <div className="container-result">
             <div className="context">
                 <div className="container-header">
-                    <h1 className="text-2xl font-bold mb-4">
+                    <h1>
                         Vehicle Models for Make ID {makeId} in Year {year}
                     </h1>
-                    <Link href='/' className="text-blue-600"> Back to filter</Link>
+                    <Link href='/'> Back to filter</Link>
                 </div>
-                <ModelsList makeId={makeId} year={year}/>
+                <ModelsList makeId={+makeId} year={+year}/>
             </div>
         </div>
     );
